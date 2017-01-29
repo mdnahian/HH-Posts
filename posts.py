@@ -24,14 +24,14 @@ class HHPosts:
 				continue
 			time = raw_post['updated_time']
 
-			post = '  {  "id":"'+post_id+'", "message":"'+message+'", "time":"'+time+'", '+user+'  },  '
+			post = '  {  "id":"'+post_id.replace('"', '')+'", "message":"'+message.replace('"', '')+'", "time":"'+time.replace('"', '')+'", '+user+'  },  '
 
 			# print post[:-1]
 
 			posts += post
 	
 		
-		posts = posts[:-1]
+		posts = posts[:-3]
 
 		posts += '] }'
 
@@ -49,7 +49,7 @@ class HHPosts:
 		user_id = raw['from']['id']
 		# profile = self.getProfilePicture(user_id)
 		# return ' "user": { "name": "'+name+'", "profile": "'+profile+'", "id": "'+user_id+'" } '
-		return ' "user": { "name": "'+name+'", "id": "'+user_id+'" } '
+		return ' "user": { "name": "'+name.replace('"', '')+'", "id": "'+user_id.replace('"', '')+'" } '
 
 
 	def getProfilePicture(self, user_id):

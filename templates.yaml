@@ -1,3 +1,3 @@
-help: I can tell you all the recent posts on Hackathon Hackers Facebook Page. Just say: Alexa ask HH for recent posts.
+help: I can tell you all the recent posts on Hackathon Hackers Facebook Page. Just say Alexa ask HH for recent posts.
 error: Could not find any recent posts on Hackathon Hackers.
-finished: That was all the recent posts for now 
+finished: That was all the recent posts for now. Goodbye.
